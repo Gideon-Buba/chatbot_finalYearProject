@@ -1,0 +1,44 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hi", "hello", "hey", "what's up", "hi there"],
+      "responses": ["Hello! How can I help you today?", "Hi there! How can I assist you?", "Hi! How may I be of service to you today?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["bye", "goodbye", "see you later", "talk to you later"],
+      "responses": ["Goodbye! Have a great day.", "See you later! Take care.", "Talk to you later!"]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["thank you", "thanks", "appreciate it", "thank you very much"],
+      "responses": ["You're welcome!", "No problem.", "Anytime!"]
+    },
+    {
+      "tag": "website",
+      "patterns": ["What's the website URL?", "What's the website address?", "Can you give me the website link?", "Where can I find the website?"],
+      "responses": ["The website address is www.example.com", "You can find the website at www.example.com"]
+    },
+    {
+      "tag": "admissions",
+      "patterns": ["How do I apply for admission?", "What are the admission requirements?", "Can you help me with my admission application?"],
+      "responses": ["To apply for admission, you need to visit our website and follow the instructions there.", "The admission requirements vary depending on the program you're applying to. You can find more information on our website."]
+    },
+    {
+      "tag": "program",
+      "patterns": ["What programs do you offer?", "Can you tell me more about your programs?", "What are the requirements for your programs?"],
+      "responses": ["We offer a wide range of programs, including computer science, business, and engineering. You can find more information about each program on our website.", "Our programs have different requirements depending on the level and field of study. You can find more information on our website."]
+    },
+    {
+      "tag": "contact",
+      "patterns": ["How can I contact you?", "What's your phone number?", "What's your email address?"],
+      "responses": ["You can contact us through our website, or by phone at 1-800-123-4567. Our email address is info@example.com"]
+    },
+    {
+      "tag": "unknown",
+      "patterns": ["Sorry, I didn't understand.", "Can you repeat that?", "I'm not sure what you mean."],
+      "responses": ["I'm sorry, I don't know the answer to that. Can I help you with something else?", "I'm not sure what you're asking. Can you please provide more information?", "I'm sorry, I couldn't understand you. Can you please rephrase your question?"]
+    }
+  ]
+}
