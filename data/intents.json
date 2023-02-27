@@ -2,8 +2,12 @@
   "intents": [
     {
       "tag": "greeting",
-      "patterns": ["hi", "hello", "hey", "what's up", "hi there"],
+      "patterns": ["hi", "hello", "hey", "what's up", "hi there", "how far","xup","good morning","good evening", "good afternoon"],
       "responses": ["Hello! How can I help you today?", "Hi there! How can I assist you?", "Hi! How may I be of service to you today?"]
+    },
+    {"tag": "name",
+     "patterns": ["what is your name", "what should I call you", "what's your name", "who are you?", "can you tell me your name", "introduce yourself"],
+      "responses": ["You can call me MyBHU Assistant", "I'm MyBHU Assistant", "I am MyBHU Assistant"]
     },
     {
       "tag": "goodbye",
@@ -18,12 +22,12 @@
     {
       "tag": "website",
       "patterns": ["What's the website URL?", "What's the website address?", "Can you give me the website link?", "Where can I find the website?"],
-      "responses": ["The website address is www.example.com", "You can find the website at www.example.com"]
+      "responses": ["The website address is https://binghamuni.edu.ng/v2/", "You can find the website at https://binghamuni.edu.ng/v2/"]
     },
     {
       "tag": "admissions",
-      "patterns": ["How do I apply for admission?", "What are the admission requirements?", "Can you help me with my admission application?"],
-      "responses": ["To apply for admission, you need to visit our website and follow the instructions there.", "The admission requirements vary depending on the program you're applying to. You can find more information on our website."]
+      "patterns": ["How do I apply for admission?", "What are the admission requirements?", "Can you help me with my admission application?","Is admission available?","are admissions available?","How do i gain admission?"],
+      "responses": ["To apply for admission, you need to visit our website and follow the instructions there.", "The admission requirements vary depending on the program you're applying to. You can find more information on our website.","To enroll in our school, you will need to fill out an application form and submit it to the admissions office. You may also need to provide transcripts and other documents as part of the application process.","The admission requirements for our school include a completed application form, WAEC and JAMB, and possibly other documents such as immunization records or proof of residency. Please contact the admissions office for more information."]
     },
     {
       "tag": "program",
@@ -33,7 +37,21 @@
     {
       "tag": "contact",
       "patterns": ["How can I contact you?", "What's your phone number?", "What's your email address?"],
-      "responses": ["You can contact us through our website, or by phone at 1-800-123-4567. Our email address is info@example.com"]
+      "responses": ["You can contact us through our website, or by phone at 07068615119,07065092268,07064483649. Our email address is directorateinfo@binghamuni.edu.ng"]
+    },
+    {
+      "tag": "age",
+      "patterns": ["how old are you","when were you made","what is your age"],
+      "responses": ["I was made in 2023, if that's what you are asking!"]
+    },
+    {
+      "tag": "suggest",
+      "patterns": ["you are useless","useless","suggest","suggestions","you are bad"],
+      "responses": ["Please mail your suggestions to directorateinfo@binghamuni.edu.ng. Thank you for helping me improve!"]
+    },
+    {"tag": "hours",
+     "patterns": ["what time does the school open","What are your hours of operation", "when are you guys open", "When is the school open", "What are the office hours for the school", "when does the school close"],
+     "responses": ["The school is open from 8:00 am to 4:00 pm Monday through Friday", "Classes start at 8:00 am and end at 4:00 pm on weekdays", "The school offices are open from 8:00 am to 4:00 pm Monday through Friday."]
     },
     {
       "tag": "unknown",
