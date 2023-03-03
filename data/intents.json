@@ -21,7 +21,7 @@
     },
     {
       "tag": "website",
-      "patterns": ["What's the website URL?", "What's the website address?", "Can you give me the website link?", "Where can I find the website?"],
+      "patterns": ["what is the school website?","What's the website URL?", "What's the website address?", "Can you give me the website link?", "Where can I find the website?"],
       "responses": ["The website address is https://binghamuni.edu.ng/v2/", "You can find the website at https://binghamuni.edu.ng/v2/"]
     },
     {
@@ -31,12 +31,12 @@
     },
     {
       "tag": "program",
-      "patterns": ["What programs do you offer?", "Can you tell me more about your programs?", "What are the requirements for your programs?"],
-      "responses": ["We offer a wide range of programs, including computer science, business, and engineering. You can find more information about each program on our website.", "Our programs have different requirements depending on the level and field of study. You can find more information on our website."]
+      "patterns": ["What programs do you offer?", "Can you tell me more about your programs?", "What are the requirements for your programs?","What courses do you have?"],
+      "responses": ["We offer a wide range of programs, including computer science, business,law and engineering. You can find more information about each program on our website.", "Our programs have different requirements depending on the level and field of study. You can find more information on our website."]
     },
     {
       "tag": "contact",
-      "patterns": ["How can I contact you?", "What's your phone number?", "What's your email address?"],
+      "patterns": ["How can I contact the school?","How can I contact you?", "What's your phone number?", "What's your email address?","what is the school email address"],
       "responses": ["You can contact us through our website, or by phone at 07068615119,07065092268,07064483649. Our email address is directorateinfo@binghamuni.edu.ng"]
     },
     {
@@ -49,9 +49,15 @@
       "patterns": ["you are useless","useless","suggest","suggestions","you are bad"],
       "responses": ["Please mail your suggestions to directorateinfo@binghamuni.edu.ng. Thank you for helping me improve!"]
     },
-    {"tag": "hours",
-     "patterns": ["what time does the school open","What are your hours of operation", "when are you guys open", "When is the school open", "What are the office hours for the school", "when does the school close"],
-     "responses": ["The school is open from 8:00 am to 4:00 pm Monday through Friday", "Classes start at 8:00 am and end at 4:00 pm on weekdays", "The school offices are open from 8:00 am to 4:00 pm Monday through Friday."]
+    {
+      "tag": "hours",
+      "patterns": ["what time does the school open","What are your hours of operation", "when are you guys open", "When is the school open", "What are the office hours for the school", "when does the school close"],
+      "responses": ["The school is open from 8:00 am to 4:00 pm Monday through Friday", "Classes start at 8:00 am and end at 4:00 pm on weekdays", "The school offices are open from 8:00 am to 4:00 pm Monday through Friday."]
+    },
+    {
+      "tag": "address",
+      "patterns": ["what is the school address?","What is your address?","Can you give me your address?","Where are you located?","What's your physical address?"],
+      "responses": ["Our address is Bingham University,Km 26 Abuja-Keffi Express Way Kodope,Nasarawa State", "We're located at Bingham University,Km 26 Abuja-Keffi Express Way Kodope,Nasarawa State","Our physical address is Bingham University,Km 26 Abuja-Keffi Express Way Kodope,Nasarawa State"]
     },
     {
       "tag": "unknown",

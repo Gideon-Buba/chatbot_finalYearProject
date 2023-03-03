@@ -1,52 +1,36 @@
 import tkinter as tk
-from chatbot import predict_class, get_response
+from chatbot import Chatbot
 
 class ChatbotGUI:
     def __init__(self, master):
         self.master = master
         master.title("Chatbot")
 
-        # Create chat history text box
-        self.chat_history = tk.Text(master, state=tk.DISABLED)
-        self.chat_history.grid(row=0, column=0, padx=10, pady=10)
+        self.chatbot = Chatbot()
 
-        # Create user input text box
-        self.user_input = tk.Entry(master)
-        self.user_input.grid(row=1, column=0, padx=10, pady=10)
+        self.conversation_text = tk.Text(master, state=tk.DISABLED, width=50, height=20)
+        self.conversation_text.grid(row=0, column=0, padx=10, pady=10)
 
-        # Create send button
-        self.send_button = tk.Button(master, text="Send", command=self.send_message)
-        self.send_button.grid(row=1, column=1, padx=10, pady=10)
+        self.input_label = tk.Label(master, text="You:")
+        self.input_label.grid(row=1, column=0, padx=10, pady=10, sticky="W")
 
-        # Bind enter key to send message function
-        master.bind('<Return>', self.send_message)
+        self.input_entry = tk.Entry(master, width=50)
+        self.input_entry.grid(row=2, column=0, padx=10, pady=10)
 
-        # Initialize chat history
-        self.chat_history.config(state=tk.NORMAL)
-        self.chat_history.insert(tk.END, "Chatbot: Hi there! How can I help you today?\n\n")
-        self.chat_history.config(state=tk.DISABLED)
+        self.send_button = tk.Button(master, text="Send", command=self.send)
+        self.send_button.grid(row=2, column=1, padx=10, pady=10)
 
-    def send_message(self, event=None):
-        # Get user input text
-        user_input_text = self.user_input.get()
+    def send(self):
+        user_input = self.input_entry.get()
+        self.input_entry.delete(0, tk.END)
 
-        # Add user input to chat history
-        self.chat_history.config(state=tk.NORMAL)
-        self.chat_history.insert(tk.END, "You: " + user_input_text + "\n\n")
-        self.chat_history.config(state=tk.DISABLED)
+        response = self.chatbot.get_response(user_input)
 
-        # Predict chatbot response
-        predicted_tag = predict_class(user_input_text)
-        response = get_response(predicted_tag)
-
-        # Add chatbot response to chat history
-        self.chat_history.config(state=tk.NORMAL)
-        self.chat_history.insert(tk.END, "Chatbot: " + response + "\n\n")
-        self.chat_history.config(state=tk.DISABLED)
-
-        # Clear user input text box
-        self.user_input.delete(0, tk.END)
+        self.conversation_text.configure(state=tk.NORMAL)
+        self.conversation_text.insert(tk.END, "You: " + user_input + "\n")
+        self.conversation_text.insert(tk.END, "Chatbot: " + response + "\n\n")
+        self.conversation_text.configure(state=tk.DISABLED)
 
 root = tk.Tk()
-chatbot_gui = ChatbotGUI(root)
+my_gui = ChatbotGUI(root)
 root.mainloop()
